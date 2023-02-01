@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int month;
+    printf("Enter number of days:");
+    scanf("%d",&month);//enter days.
+    printf("%d",month%30);
+    int mon = month/30;//
+    printf("Number of months are %d\n",mon);//get total months
+    int week = month - 30*mon; //reduce number of month i.e 30xmon
+    int a = (month%30)/7;//get number of weeks
+    printf("Number of weeks are %d\n",a);
+    week-=a*7;
+    int day = week%7;
+    if (day<0){printf("Number of days are 0\n");}
+    else{
+    printf("Number of days are %d",day);}
+    return 0;
+}
